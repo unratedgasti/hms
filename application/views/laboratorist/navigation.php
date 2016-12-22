@@ -138,6 +138,19 @@
 				</a>
 
 		</li>
+		<li class="<?php if($page_name == 'radiology')echo 'dark-nav active';?>">
+
+			<span class="glow"></span>
+
+				<a href="<?php echo base_url();?>index.php?laboratorist/radiology" >
+
+				<i class="icon-user icon-2x"></i>
+
+					<span><?php echo get_phrase('Radiology');?></span>
+
+				</a>
+
+		</li>
 		
 
 

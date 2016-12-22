@@ -156,6 +156,17 @@ class laboratorist extends CI_Controller
 		$this->load->view('index', $page_data);
 	}
 
+	function radiology(){
+		if ($this->session->userdata('laboratorist_login') != 1)
+
+			redirect(base_url() . 'index.php?login', 'refresh');
+
+		$page_data['page_name']  = 'radiology';
+
+		$page_data['page_title'] = get_phrase('radiology');
+		$this->load->view('index', $page_data);
+	}
+
 
 
 	/***MANAGE PRESCRIPTIONS******/

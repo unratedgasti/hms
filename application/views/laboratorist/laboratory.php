@@ -3,7 +3,6 @@
    border: none !important;
 }
 </style>
-
 <div class="box" >
 
 	<div class="box-header" >
@@ -86,7 +85,7 @@
                             <option value="SINGLE"<?=$patientresult[0]['sstatus'] == 'SINGLE' ? ' selected="selected"' : '';?>>SINGLE</option>
                             <option value="MARRIED"<?=$patientresult[0]['sstatus'] == 'MARRIED' ? ' selected="selected"' : '';?>>MARRIED</option>
                             <option value="WIDOWED"<?=$patientresult[0]['sstatus'] == 'WIDOWED' ? ' selected="selected"' : '';?>>WIDOWED</option>
-                              <option value=" "<?=$patientresult[0]['sstatus'] == ' ' ? ' selected="selected"' : '';?>>No status indicated</option> 
+                              <option value=" "<?=$patientresult[0]['sstatus'] == '' ? ' selected="selected"' : '';?>>No status indicated</option> 
                             
 
                              
@@ -213,89 +212,93 @@
         <td>Transparency</td>
     
       <td colspan="2"><select>
-     <option value="Slight Turbid"<?=$patientresult[0]['uxmactrans'] == 'Slight Turbid' ? ' selected="selected"' : '';?>>Yellow</option>
-            <option value="Turbid"<?=$patientresult[0]['uxmactrans'] == 'Turbid' ? ' selected="selected"' : '';?>>Green</option>
-               <option value="More Turbid"<?=$patientresult[0]['uxmactrans'] == 'Slight Turbid' ? ' selected="selected"' : '';?>>Brown</option>
+     <option value="Slight Turbid"<?=$patientresult[0]['uxmactrans'] == 'Slight Turbid' ? ' selected="selected"' : '';?>>Slight Turbid</option>
+            <option value="Turbid"<?=$patientresult[0]['uxmactrans'] == 'Turbid' ? ' selected="selected"' : '';?>>Turbid</option>
+
       </select></td>
       <td>Pus. Cells</td>
-        <td colspan="2"><input type="text" name="" ></td>
+        <td colspan="2"><input type="text" name="uxmicplus" value="<?=$patientresult[0]['uxmicplus']?>"></td>
     </tr>
      <tr>
+
         <td>Reaction</td>
-      <td colspan="2"><input type="text" name="" ></td>
+      <td colspan="2"><input type="text" name="uxmacreac"  value="<?=$patientresult[0]['uxmacreac']?>"></td>
       <td>Bacteria</td>
        <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+     <option value="Few"<?=$patientresult[0]['uxmicbact'] == 'Few' ? ' selected="selected"' : '';?>>Few</option>
+            <option value="Normal"<?=$patientresult[0]['uxmicbact'] == 'Normal' ? ' selected="selected"' : '';?>>Normal</option>
+             <option value="More"<?=$patientresult[0]['uxmicbact'] == 'More' ? ' selected="selected"' : '';?>>More</option>
+
       </select></td>
     </tr>
      <tr>
         <td>Sp. Gravity</td>
-      <td colspan="2"><input type="text" name="" ></td>
+      <td colspan="2"><input type="text" name="uxmacspec" value="<?=$patientresult[0]['uxmacspec']?>"></td>
       <td>Epithelial Cells</td>
         <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+   <option value="Few"<?=$patientresult[0]['uxmicepith'] == 'Few' ? ' selected="selected"' : '';?>>Few</option>
+            <option value="Normal"<?=$patientresult[0]['uxmicepith'] == 'Normal' ? ' selected="selected"' : '';?>>Normal</option>
+             <option value="More"<?=$patientresult[0]['uxmicepith'] == 'More' ? ' selected="selected"' : '';?>>More</option>
       </select></td>
     </tr>
      <tr>
         <td>Sugar</td>
       <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+       <option value="Positive"<?=$patientresult[0]['uxmacsugar'] == 'Positive' ? ' selected="selected"' : '';?>>Positive</option>
+            <option value="Negative"<?=$patientresult[0]['uxmacsugar'] == 'Negative' ? ' selected="selected"' : '';?>>Negative</option>
       </select></td>
       <td>Amorph Urates/Phospates</td>
         <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+      <option value="Few"<?=$patientresult[0]['uxmicamorph'] == 'Few' ? ' selected="selected"' : '';?>>Few</option>
+            <option value="Normal"<?=$patientresult[0]['uxmicamorph'] == 'Normal' ? ' selected="selected"' : '';?>>Normal</option>
+             <option value="More"<?=$patientresult[0]['uxmicamorph'] == 'More' ? ' selected="selected"' : '';?>>More</option>
       </select></td>
     </tr>
      <tr>
         <td>Protein</td>
        <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+        <option value="Positive"<?=$patientresult[0]['uxmacprotein'] == 'Positive' ? ' selected="selected"' : '';?>>Positive</option>
+            <option value="Negative"<?=$patientresult[0]['uxmacprotein'] == 'Negative' ? ' selected="selected"' : '';?>>Negative</option>
       </select></td>
       <td>Pregnancy Test</td>
-        <td colspan="2"><input type="text" name="" ></td>
+        <td colspan="2"><input type="text" name="uxmicpreg" value="<?=$patientresult[0]['uxmicpreg']?>"></td>
     </tr>
     <tr>
          <td></td>
        <td colspan="2"></td>
       <td>Others</td>
-        <td colspan="2"><input type="text" name="" ></td>
+        <td colspan="2"><input type="text" name="uxmicothers" value="<?=$patientresult[0]['uxmicothers']?>" ></td>
     </tr>
      <tr>
         <td>Color</td>
       <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+      <option value="Yellow"<?=$patientresult[0]['fxmaccol'] == 'Yellow' ? ' selected="selected"' : '';?>>Yellow</option>
+            <option value="Green"<?=$patientresult[0]['fxmaccol'] == 'Green' ? ' selected="selected"' : '';?>>Green</option>
+               <option value="Brown"<?=$patientresult[0]['fxmaccol'] == 'Brown' ? ' selected="selected"' : '';?>>Brown</option>
+                 <option value=" "<?=$patientresult[0]['fxmaccol'] == '' ? ' selected="selected"' : '';?>></option>
       </select></td>
       <td>Pus. Cells</td>
-        <td colspan="2"><input type="text" name="" ></td>
+        <td colspan="2"><input type="text" name="fxmicpus" value="<?=$patientresult[0]['fxmicpus']?>" ></td>
     </tr>
      <tr>
         <td>Consistency</td>
       <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+       <option value="1"<?=$patientresult[0]['fxmaccon'] == '1' ? ' selected="selected"' : '';?>>1</option>
+            <option value="2"<?=$patientresult[0]['fxmaccon'] == '2' ? ' selected="selected"' : '';?>>1</option>
+               <option value="3"<?=$patientresult[0]['fxmaccon'] == '3' ? ' selected="selected"' : '';?>>2</option>
+                 <option value=" "<?=$patientresult[0]['fxmaccon'] == '' ? ' selected="selected"' : '';?>></option>
       </select></td>
       <td>RBC Cells</td>
-        <td colspan="2"><input type="text" name="" ></td>
+        <td colspan="2"><input type="text" name="fxmicrbc" value="<?=$patientresult[0]['fxmicrbc']?>" ></td>
     </tr>
       <tr>
     <td>
         Findings
     </td>
         <td colspan="5">
-  <textarea class="form-control" rows="5" cols="50" style="width: 100%"></textarea>
+  <textarea class="form-control" rows="5" cols="50" style="width: 100%">
+      <?=$patientresult[0]['labfindings']?>
+  </textarea>
 </td>
     </tr>
   </tbody>
@@ -309,56 +312,56 @@
                     <tbody>
                     <tr>
                      <td>Random Blood Sugar</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcrandombs" value="<?=$patientresult[0]['bcrandombs']?>" ></td>
                      <td>Fasting Blood Sugar</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcfastingbs" value="<?=$patientresult[0]['bcfastingbs']?>" ></td>
                     </tr>
                    
                     <tr>
                      <td>Blood Uric Acid</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcbloodua" value="<?=$patientresult[0]['bcbloodua']?>" ></td>
                      <td>Blood Urea Nitrogen</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcbloodun" value="<?=$patientresult[0]['bcbloodun']?>" ></td>
                     </tr>
                     <tr>
                     <td>Creatinine</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bccreatinine" value="<?=$patientresult[0]['bccreatinine']?>" ></td>
                     <td>Cholesterol</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bccholesterol" value="<?=$patientresult[0]['bccholesterol']?>" ></td>
                     </tr>                   
                     <tr>
                      <td>Triglycerides</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bctriglycerides" value="<?=$patientresult[0]['bctriglycerides']?>" ></td>
                      <td>HDL</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bchdl" value="<?=$patientresult[0]['bchdl']?>" ></td>
                     </tr>
                     <tr>
                      <td>LDL</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcldl" value="<?=$patientresult[0]['bcldl']?>" ></td>
                      <td>ALT/SGPT</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcaltsgpt" value="<?=$patientresult[0]['bcaltsgpt']?>" ></td>
                     </tr>
                     <tr>
                      <td>AST/SGOT</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcastsgot" value="<?=$patientresult[0]['bcastsgot']?>" ></td>
                      <td>HDL</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="" value="<?=$patientresult[0]['fxmicrbc']?>" ></td>
                     </tr>
                     <tr>
                      <td>Sodium</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcsodium" value="<?=$patientresult[0]['bcsodium']?>" ></td>
                      <td>Pottassium</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcpotassium" value="<?=$patientresult[0]['bcpotassium']?>" ></td>
                     </tr>
                      <tr>
                      <td>Glycosylated Hb</td>
-                     <td colspan="2"><input type="text" name="" ></td>
+                     <td colspan="2"><input type="text" name="bcglycosylatedhb" value="<?=$patientresult[0]['bcglycosylatedhb']?>" ></td>
                      <td></td>
                      <td colspan="2"></td>
                     </tr>
                      <tr>
                      <td>Others</td>
-                     <td colspan="11"><input type="text" name="" style="width: 100%"></td>
+                     <td colspan="11"><input type="text" name="bcothers" style="width: 100%" value="<?=$patientresult[0]['bcothers']?>" ></td>
                      
                     </tr>
                     </tbody>
@@ -368,7 +371,7 @@
             <div>
                 Miscellaneous 
                 <textarea rows="20" style="width: 80%" >
-                    
+                   <?=$patientresult[0]['miscellaneous']?>
                 </textarea>
             </div>
                 </div>
