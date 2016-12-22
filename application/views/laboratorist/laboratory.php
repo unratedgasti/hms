@@ -3,7 +3,7 @@
    border: none !important;
 }
 </style>
-<?=var_dump($patientresult)?>
+
 <div class="box" >
 
 	<div class="box-header" >
@@ -116,7 +116,7 @@
                         foreach($doctors as $row2):
 
                           ?>
-<option value="<?php echo $row2['recno'];?>"<?=$patientresult[0]['conductedby'] == $row2['drname'] ? ' selected="selected"' : '';?>><?php echo $row2['drname'];?></option>
+            <option value="<?php echo $row2['recno'];?>"<?=$patientresult[0]['conductedby'] == $row2['drname'] ? ' selected="selected"' : '';?>><?php echo $row2['drname'];?></option>
 
 
                       <option value="<?php echo $row2['recno'];?>" <?php if($row2['recno'] == $row['recno'])echo 'selected';?>>
@@ -166,56 +166,56 @@
     <tr>
      
       <td>Hemoglobin</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxhemoglobin" value="<?=$patientresult[0]['hxhemoglobin']?>" style="width: 75%"></td>
       <td>Segmenters</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxsegmenter" style="width: 75%" value="<?=$patientresult[0]['hxsegmenter']?>"></td>
       <td>Platelet Count</td>
-        <td><input type="text" name="" style="width: 75%"></td>
+        <td><input type="text" name="hxplatelet" style="width: 75%" value="<?=$patientresult[0]['hxplatelet']?>"></td>
     </tr>
     <tr>
      
       <td>Hematocrit</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxhematocrit" style="width: 75%" value="<?=$patientresult[0]['hxhematocrit']?>"></td>
       <td>Lymphocytes</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxlymphocyte" style="width: 75%" value="<?=$patientresult[0]['hxlymphocyte']?>"></td>
       <td> Blood Type</td>
-        <td><input type="text" name="" style="width: 75%"></td>
+        <td><input type="text" name="hxbloodtype" style="width: 75%" value="<?=$patientresult[0]['hxbloodtype']?>"></td>
     </tr>
     <tr>
      
       <td>WBC</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxwbc" style="width: 75%" value="<?=$patientresult[0]['hxwbc']?>"></td>
       <td>Monocytes</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxmonocyte" style="width: 75%" value="<?=$patientresult[0]['hxmonocyte']?>"></td>
       <td>HBsAg</td>
-        <td><input type="text" name="" style="width: 75%"></td>
+        <td><input type="text" name="hxhbsag" style="width: 75%" value="<?=$patientresult[0]['hxhbsag']?>"></td>
     </tr>
     <tr>
      
       <td></td>
       <td></td>
       <td>Others</td>
-      <td><input type="text" name="" style="width: 75%"></td>
+      <td><input type="text" name="hxothers" style="width: 75%" value="<?=$patientresult[0]['hxothers']?>"></td>
       <td>RPR</td>
-        <td><input type="text" name="" style="width: 75%"></td>
+        <td><input type="text" name="hxrpr" style="width: 75%" value="<?=$patientresult[0]['hxrpr']?>"></td>
     </tr>
     <tr>
         <td>Color</td>
       <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+         <option value="Yellow"<?=$patientresult[0]['uxmaccol'] == 'Yellow' ? ' selected="selected"' : '';?>>Yellow</option>
+            <option value="Green"<?=$patientresult[0]['uxmaccol'] == 'Green' ? ' selected="selected"' : '';?>>Green</option>
+               <option value="Brown"<?=$patientresult[0]['uxmaccol'] == 'Brown' ? ' selected="selected"' : '';?>>Brown</option>
       </select></td>
       <td>RBC</td>
-        <td colspan="2"><input type="text" name="" ></td>
+        <td colspan="2"><input type="text" name="uxmicrbc"  value="<?=$patientresult[0]['uxmicrbc']?>"></td>
     </tr>
      <tr>
         <td>Transparency</td>
     
       <td colspan="2"><select>
-      <option>Yellow</option>
-      <option>Green</option>
-      <option>Brown</option>
+     <option value="Slight Turbid"<?=$patientresult[0]['uxmactrans'] == 'Slight Turbid' ? ' selected="selected"' : '';?>>Yellow</option>
+            <option value="Turbid"<?=$patientresult[0]['uxmactrans'] == 'Turbid' ? ' selected="selected"' : '';?>>Green</option>
+               <option value="More Turbid"<?=$patientresult[0]['uxmactrans'] == 'Slight Turbid' ? ' selected="selected"' : '';?>>Brown</option>
       </select></td>
       <td>Pus. Cells</td>
         <td colspan="2"><input type="text" name="" ></td>
